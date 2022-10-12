@@ -48,8 +48,11 @@ FROM
 SELECT
 	Key,
 	CASE WHEN
+		-- xとyの値を比較して最大値を求める、さらにその値とzの値を比較して
 		CASE WHEN x > y THEN x ELSE y END > z
+	-- zよりxとyの最大値が大きい値であればその値をgreatestとし、
 	THEN CASE WHEN x > y THEN x ELSE y END
+	-- zの方が大きければzをgreatestとする
 	ELSE z END AS greatest
 FROM
 	Greatests
