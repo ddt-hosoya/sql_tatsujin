@@ -1,0 +1,19 @@
+●演習問題4-③ 調べてみよう COALESCE関数
+NULLを値に変換するCOALESCEという関数があります。この関数の構文と仕様を調べてください。
+また逆に、特定の条件に合致するとNULLを出力するNULLIFという関数があります。この関数の構文と仕様を調べてください。
+
+【Oracle】
+■COALESCE関数
+式のリストのうち、NULLでない最初の値を戻す。式のリストが全てNULLである場合、COALESCEはNULLを戻す。
+例：
+COALESCE(expr1, expr2, ...)
+expr1がNULLだった場合expr2を返す
+expr1がNULLでなければexpr1を返す
+
+
+■NULLIF関数
+expr1とexpr2を比較する。 式が等しい場合、関数はNULLを返す。 異なる場合は、expr1を戻す。 expr1には、リテラルNULLを指定できない。
+例：
+NULLIF(expr1, expr2)
+expr1とexpr2が等しい場合NULLを返す
+expr1とexpr2が等しくない場合expr1を返す
